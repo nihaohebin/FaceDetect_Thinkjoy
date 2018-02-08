@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">习悦人脸识别</string>
+
+    <!--activity_main-->
+    <string name="main_personManager">手机人员管理</string>
+    <string name="main_landscapeCompare">手机横屏人员识别5–5.5寸</string>
+    <string name="main_portraitCompare">手机竖屏人员识别5–5.5寸</string>
+    <string name="main_ageGenderdetect">手机横屏年龄性别检测5–5.5寸</string>
+    <string name="main_compare">佳都竖屏人脸识别(定制)</string>
+    <string name="main_bigLandscapeCompare">平板横屏人脸识别10–14寸</string>
+    <string name="main_agedetect">平板横屏年龄性别识别10–14寸</string>
+    <string name="mian_kubimanager">平板横屏人员管理10–14寸</string>
+
+
+    <!--activity_msg_compare_landscape2-->
+    <string name="textSize">15sp</string>
+
+</resources>

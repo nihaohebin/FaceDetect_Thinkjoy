@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="press">#919191</color>
+    <color name="line">#919191</color>
+    <color name="title">#4c5158</color>
+    <color name="gray">#A2B5CD</color>
+
+    <color name="et">#3b3b3b</color>
+    <color name="hint">#9c9c9c</color>
+    <color name="tv">#797979</color>
+    <color name="commit">#369DDF</color>
+
+    <!--MsgAge-->
+    <color name="mianColor">#00ffff</color>
+
+
+    <!--activity_msg_compare_landscape2-->
+
+
+</resources>

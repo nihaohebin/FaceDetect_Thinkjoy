@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:background="@drawable/bg_shuping"
+        android:id="@+id/flDetect"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="544dp"
+            android:layout_marginTop="375dp"
+            android:src="@drawable/line" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="200dp"
+            android:layout_height="370dp"
+            android:layout_marginLeft="544dp"
+            android:gravity="bottom"
+            android:text="无"
+            android:textColor="@color/white"
+            android:textSize="54sp" />
+
+        <TextView
+            android:id="@+id/tvConfidence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="780dp"
+            android:layout_marginTop="330dp"
+            android:text="相似度：0"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/tvFPS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="550dp"
+            android:layout_marginTop="425dp"
+            android:text="FPS：0.0"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/tvScreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="740dp"
+            android:layout_marginTop="425dp"
+            android:text="分辨率：0"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/tvNet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="550dp"
+            android:layout_marginTop="460dp"
+            android:text="网络延时：0ms 网络延时较高，请稍候..."
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+
+        <SurfaceView
+            android:id="@+id/surfaceView"
+            android:layout_width="844dp"
+            android:layout_height="474dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="546dp" />
+
+        <com.tjoydoor.view.camera.FaceOverlayViewCompare
+            android:id="@+id/overlay"
+            android:layout_width="844dp"
+            android:layout_height="474dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="546dp"
+            android:visibility="gone" />
+
+        <com.youth.banner.Banner
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible" />
+
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/flMsg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_msg_p"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/llSuccess"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="200dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="2016年11月5号 星期五  08:30"
+                android:textColor="#fff"
+                android:textSize="40sp" />
+
+            <ImageView
+                android:id="@+id/iv_head"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_marginTop="60dp"
+                android:src="@drawable/ic_loading" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="姓  名"
+                android:textColor="#fff"
+                android:textSize="40sp" />
+
+            <TextView
+                android:id="@+id/tvMsgName"
+                android:layout_width="600dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="#31ffffff"
+                android:gravity="center"
+                android:text="资料欠缺"
+                android:textColor="#fff"
+                android:textSize="50sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="部  门"
+                android:textColor="#fff"
+                android:textSize="40sp" />
+
+            <TextView
+                android:id="@+id/tvDept"
+                android:layout_width="600dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="#31ffffff"
+                android:gravity="center"
+                android:text="资料欠缺"
+                android:textColor="#fff"
+                android:textSize="50sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="职  位"
+                android:textColor="#fff"
+                android:textSize="40sp" />
+
+            <TextView
+                android:id="@+id/tvPosition"
+                android:layout_width="600dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="#31ffffff"
+                android:gravity="center"
+                android:text="资料欠缺"
+                android:textColor="#fff"
+                android:textSize="50sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="年  龄"
+                android:textColor="#fff"
+                android:textSize="40sp" />
+
+            <TextView
+                android:id="@+id/tvAge"
+                android:layout_width="600dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="#31ffffff"
+                android:gravity="center"
+                android:text="资料欠缺"
+                android:textColor="#fff"
+                android:textSize="50sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="性  别"
+                android:textColor="#fff"
+                android:textSize="40sp" />
+
+            <TextView
+                android:id="@+id/tvSex"
+                android:layout_width="600dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="#31ffffff"
+                android:gravity="center"
+                android:text="资料欠缺"
+                android:textColor="#fff"
+                android:textSize="50sp" />
+
+        </LinearLayout>
+
+
+        <FrameLayout
+            android:id="@+id/flFail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_fail_p"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:id="@+id/flError"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_error_p"
+            android:orientation="vertical"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvSec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center_horizontal"
+            android:layout_marginTop="50dp"
+            android:textColor="#9ACB62"
+            android:textSize="50sp" />
+    </FrameLayout>
+</FrameLayout>

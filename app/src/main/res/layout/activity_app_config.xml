@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="40px"
+        android:background="#AEAEAE" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="160px"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70px"
+            android:text="摄像头"
+            android:textColor="#676767"
+            android:textSize="66px" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100px"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:button="@drawable/rbcheck"
+                android:id="@+id/rbFront"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:paddingLeft="30px"
+                android:text="前置"
+                android:textColor="#8E8E8E"
+                android:textSize="60px" />
+
+            <RadioButton
+                android:button="@drawable/rbnocheck"
+                android:id="@+id/rbRear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="160px"
+                android:text="后置"
+                android:paddingLeft="30px"
+                android:textColor="#8E8E8E"
+                android:textSize="60px" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#AEAEAE" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="160px"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70px"
+            android:text="焦    距"
+            android:textColor="#676767"
+            android:textSize="66px" />
+
+        <EditText
+            android:hint="焦距值必须大于0"
+            android:id="@+id/etFocusValue"
+            android:textColor="#8E8E8E"
+            android:textSize="60px"
+            android:text="0"
+            android:inputType="number"
+            android:background="@color/white"
+            android:layout_marginRight="100px"
+            android:layout_marginLeft="100px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#AEAEAE" />
+
+    <TextView
+        android:layout_marginRight="50px"
+        android:layout_marginLeft="70px"
+        android:textSize="57px"
+        android:layout_marginTop="40px"
+        android:text="注：可通过调节相机焦距来调节检测距离，默认0为自动焦距。"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:textSize="72px"
+            android:textColor="@color/white"
+            android:text="保存"
+            android:gravity="center"
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="180px"
+            android:layout_gravity="bottom"
+            android:background="#1CA523" />
+    </LinearLayout>
+</LinearLayout>
