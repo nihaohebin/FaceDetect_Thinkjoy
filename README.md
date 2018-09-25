@@ -1,1 +1,1 @@
-# facedetect_tjoy
+# 基于CNN卷积神经网络在线人脸识别
