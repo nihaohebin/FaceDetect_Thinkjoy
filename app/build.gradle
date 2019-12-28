@@ -20,43 +20,48 @@ android {
     }
     sourceSets {
         main {
-            jniLibs.srcDirs = ['libs'];
+            jniLibs.srcDirs = ['libs']
         }
     }
+    //定义构建ApkName
     android.applicationVariants.all { variant ->
-        variant.outputs.each { output ->
-            output.outputFile = new File(output.outputFile.parent, defaultConfig.applicationId + "-" + buildType.name + "-v" +
-                    defaultConfig.versionName + "-" + defaultConfig.versionCode + ".apk");
+        variant.outputs.all {
+            outputFileName = "faceDetct_${buildType.name}.apk"
         }
     }
     productFlavors {
     }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false              //是否忽略lint报错
+    }
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    compile 'com.android.support:appcompat-v7:25.3.1'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    testCompile 'junit:junit:4.12'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    implementation 'com.android.support:appcompat-v7:25.3.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
     //人脸识别
-    compile files('libs/TJoyFace-2.0.0.jar')
-    compile files('libs/TJoySDK.jar')
+    implementation files('libs/TJoyFace-2.0.0.jar')
+    implementation files('libs/TJoySDK.jar')
     //图像处理
-    compile 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
     //广告条
-    compile 'com.youth.banner:banner:1.4.9'
+    implementation 'com.youth.banner:banner:1.4.9'
     //日志
-    compile 'com.orhanobut:logger:1.3'
+    implementation 'com.orhanobut:logger:1.3'
+
+    implementation 'com.lzy.net:okgo:3.0.4'
     //图像选择
-    compile 'com.lzy.widget:imagepicker:0.5.0'
+    implementation 'com.lzy.widget:imagepicker:0.5.0'
+    implementation 'com.google.code.gson:gson:2.8.6'
     //后台日志  包括okHttp、Gson
-    compile 'cn.bmob.android:bmob-sdk:3.5.0'
-    compile 'cn.bmob.android:http-legacy:1.0'
+//    implementation 'cn.bmob.android:bmob-sdk:3.5.0'
+//    implementation 'cn.bmob.android:http-legacy:1.0'
     //view注解
-    compile 'com.jakewharton:butterknife:8.5.1'
+    implementation 'com.jakewharton:butterknife:8.5.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
-    compile files('libs/ThreadPoolHelp-2.0.jar')
+    implementation files('libs/ThreadPoolHelp-2.0.jar')
 }

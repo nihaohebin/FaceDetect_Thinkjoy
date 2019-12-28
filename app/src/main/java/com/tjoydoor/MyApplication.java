@@ -9,7 +9,6 @@ import com.orhanobut.logger.Logger;
 import com.tjoydoor.main.WelcomeActivity;
 import com.tjoydoor.util.GlideImageLoader;
 
-import cn.bmob.v3.Bmob;
 import cn.thinkjoy.sdk.SDKInitializer;
 
 /**
@@ -23,7 +22,7 @@ public class MyApplication extends Application implements Thread.UncaughtExcepti
     public void onCreate() {
         super.onCreate();
 
-        Bmob.initialize(this, "e8b2bb2b249c82678e70dd56281addfd");
+//        Bmob.initialize(this, "e8b2bb2b249c82678e70dd56281addfd");
 
         SDKInitializer.init(this);
 

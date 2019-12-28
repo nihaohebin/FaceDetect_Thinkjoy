@@ -2,14 +2,12 @@ package com.tjoydoor.entity;
 
 import java.io.Serializable;
 
-import cn.bmob.v3.BmobObject;
-
 /**
  * Created by hebin
  * on 2017/3/27 0027.
  */
 
-public class TJoyDoorLog extends BmobObject implements Serializable {
+public class TJoyDoorLog   implements Serializable {
     
     private String content;
 

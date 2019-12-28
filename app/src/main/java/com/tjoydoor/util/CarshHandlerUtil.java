@@ -5,11 +5,8 @@ import android.content.pm.PackageInfo;
 import android.os.Build;
 import android.os.Environment;
 import android.text.TextUtils;
-import android.util.Log;
 
-import com.orhanobut.logger.Logger;
 import com.tjoydoor.Global;
-import com.tjoydoor.entity.TJoyDoorError;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -21,9 +18,6 @@ import java.lang.Thread.UncaughtExceptionHandler;
 import java.text.DecimalFormat;
 import java.util.Calendar;
 import java.util.TimeZone;
-
-import cn.bmob.v3.exception.BmobException;
-import cn.bmob.v3.listener.SaveListener;
 
 public class CarshHandlerUtil implements UncaughtExceptionHandler {
     public static String VERSION = "Unknown";
@@ -115,21 +109,21 @@ public class CarshHandlerUtil implements UncaughtExceptionHandler {
 
     public static void postError(String content) {
 
-        TJoyDoorError testBomb = new TJoyDoorError();
-        testBomb.setContent(content);
-        testBomb.save(new SaveListener<String>() {
-            @Override
-            public void done(String s, BmobException e) {
-
-                if (e == null) {
-                    Log.i("TAG", "错误日志上传成功");
-                    //上传一次后删除
-                    FileUtil.deleteFile(getLogFilePath());
-                } else {
-                    Logger.i("错误日志上传失败：" + e.getMessage() + "------" + e.getErrorCode());
-                }
-            }
-        });
+//        TJoyDoorError testBomb = new TJoyDoorError();
+//        testBomb.setContent(content);
+//        testBomb.save(new SaveListener<String>() {
+//            @Override
+//            public void done(String s, BmobException e) {
+//
+//                if (e == null) {
+//                    Log.i("TAG", "错误日志上传成功");
+//                    //上传一次后删除
+//                    FileUtil.deleteFile(getLogFilePath());
+//                } else {
+//                    Logger.i("错误日志上传失败：" + e.getMessage() + "------" + e.getErrorCode());
+//                }
+//            }
+//        });
     }
 
     /**

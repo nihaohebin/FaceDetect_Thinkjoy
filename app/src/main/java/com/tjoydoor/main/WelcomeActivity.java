@@ -27,8 +27,6 @@ import com.tjoydoor.util.ToastUtil;
 
 import java.util.List;
 
-import cn.bmob.v3.exception.BmobException;
-import cn.bmob.v3.listener.SaveListener;
 import cn.thinkjoy.face.imp.FaceSetListener;
 import cn.thinkjoy.face.imp.FaceSetQueryListener;
 import cn.thinkjoy.face.imp.UserBindListener;
@@ -236,22 +234,22 @@ public class WelcomeActivity extends Activity {
 
             TJoyDoorLog testBomb = new TJoyDoorLog();
             testBomb.setContent(content);
-            testBomb.save(new SaveListener<String>() {
-                @Override
-                public void done(String s, BmobException e) {
-
-                    if (e == null) {
-                        Logger.i("时间日志上传成功");
-
-                        FileUtil.clearFile(WelcomeActivity.this, "tjoy", Global.FilePath.httpTime);
-                        FileUtil.clearFile(WelcomeActivity.this, "tjoy", Global.FilePath.bmpSize);
-                        FileUtil.clearFile(WelcomeActivity.this, "tjoy", Global.FilePath.androidDealTime);
-                        FileUtil.clearFile(WelcomeActivity.this, "tjoy", Global.FilePath.compareResult);
-                    } else {
-                        Logger.i("创建数据失败：" + e.getMessage() + "------" + e.getErrorCode());
-                    }
-                }
-            });
+//            testBomb.save(new SaveListener<String>() {
+//                @Override
+//                public void done(String s, BmobException e) {
+//
+//                    if (e == null) {
+//                        Logger.i("时间日志上传成功");
+//
+//                        FileUtil.clearFile(WelcomeActivity.this, "tjoy", Global.FilePath.httpTime);
+//                        FileUtil.clearFile(WelcomeActivity.this, "tjoy", Global.FilePath.bmpSize);
+//                        FileUtil.clearFile(WelcomeActivity.this, "tjoy", Global.FilePath.androidDealTime);
+//                        FileUtil.clearFile(WelcomeActivity.this, "tjoy", Global.FilePath.compareResult);
+//                    } else {
+//                        Logger.i("创建数据失败：" + e.getMessage() + "------" + e.getErrorCode());
+//                    }
+//                }
+//            });
         }else {
             FileUtil.clearFile(WelcomeActivity.this, "tjoy", Global.FilePath.httpTime);
             FileUtil.clearFile(WelcomeActivity.this, "tjoy", Global.FilePath.bmpSize);
